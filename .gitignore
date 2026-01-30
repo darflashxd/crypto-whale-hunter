@@ -1,0 +1,15 @@
+
+.env
+.env.save
+
+
+__pycache__/
+*.pyc
+
+
+venv/
+.venv/
+
+
+logs/
+*.log
