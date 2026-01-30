@@ -1,9 +1,3 @@
-Berikut adalah **file lengkapnya** (gabungan dari bagian atas yang kamu kirim, ditambah panduan instalasi dan cara pakai).
-
-Saya sudah merapikan struktur foldernya agar sesuai dengan kodingan aslimu (di mana `tokens.json` ada di folder utama, bukan di folder `config` yang belum kita buat).
-
-Tinggal copy **semua** blok kode di bawah ini, lalu paste ke `nano README.md`.
-
 ```markdown
 # 🐋 Multi-Token Crypto Whale Hunter (Etherscan V2)
 
