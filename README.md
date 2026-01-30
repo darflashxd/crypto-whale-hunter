@@ -1,4 +1,3 @@
-```markdown
 # 🐋 Multi-Token Crypto Whale Hunter (Etherscan V2)
 
 A robust, non-custodial market intelligence tool designed to track "Whale" activities (large transactions) across the Ethereum network in real-time. Built with the new **Etherscan API V2** standard.
@@ -117,6 +116,3 @@ This tool is for educational purposes only. On-chain data does not guarantee mar
 
 ---
 
-```
-
-```
