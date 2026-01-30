@@ -1,3 +1,10 @@
+Berikut adalah **file lengkapnya** (gabungan dari bagian atas yang kamu kirim, ditambah panduan instalasi dan cara pakai).
+
+Saya sudah merapikan struktur foldernya agar sesuai dengan kodingan aslimu (di mana `tokens.json` ada di folder utama, bukan di folder `config` yang belum kita buat).
+
+Tinggal copy **semua** blok kode di bawah ini, lalu paste ke `nano README.md`.
+
+```markdown
 # 🐋 Multi-Token Crypto Whale Hunter (Etherscan V2)
 
 A robust, non-custodial market intelligence tool designed to track "Whale" activities (large transactions) across the Ethereum network in real-time. Built with the new **Etherscan API V2** standard.
@@ -17,52 +24,65 @@ A robust, non-custodial market intelligence tool designed to track "Whale" activ
 
 ```text
 crypto-whale-hunter/
-├── config/             # Configuration files
-├── src/                # Source code
+├── src/                # Source code modules
 │   ├── api_client.py   # Etherscan V2 Wrapper
 │   ├── analyzer.py     # Logic for Whale Detection & Math
 │   └── notifier.py     # Discord Embed Builder
 ├── main.py             # Application Entry Point
 ├── tokens.json         # Watchlist Database
 ├── .env                # API Keys (Not included in repo)
+├── .gitignore          # Git exclusion rules
 └── requirements.txt    # Python Dependencies
 
-🚀 Installation
-Clone the Repository
+```
 
-Bash
+## 🚀 Installation
 
-git clone [https://github.com/YOUR_USERNAME/crypto-whale-hunter.git](https://github.com/YOUR_USERNAME/crypto-whale-hunter.git)
+1. **Clone the Repository**
+```bash
+git clone [https://github.com/darflashxd/crypto-whale-hunter.git](https://github.com/darflashxd/crypto-whale-hunter.git)
 cd crypto-whale-hunter
-Set Up Virtual Environment
 
-Bash
+```
 
+
+2. **Set Up Virtual Environment**
+```bash
 python -m venv venv
-# For Linux/Mac:
+# Linux/MacOS:
 source venv/bin/activate
-# For Windows:
+# Windows:
 # venv\Scripts\activate
-Install Dependencies
 
-Bash
+```
 
+
+3. **Install Dependencies**
+```bash
 pip install -r requirements.txt
-⚙️ Configuration
-1. Environment Variables
-Create a .env file in the root directory and add your credentials:
 
-Cuplikan kode
+```
 
-ETHERSCAN_API_KEY=YourEtherscanKeyHere
-DISCORD_WEBHOOK_URL=YourDiscordWebhookUrlHere
-2. Token Watchlist (tokens.json)
-Edit tokens.json to define which tokens to track. You can add as many as you want.
 
-Example:
 
-JSON
+## ⚙️ Configuration
 
+### 1. Environment Variables
+
+Create a `.env` file in the root directory and add your credentials:
+
+```env
+ETHERSCAN_API_KEY=YourEtherscanKey
+DISCORD_WEBHOOK_URL=YourDiscordWebhookUrl
+
+```
+
+### 2. Token Watchlist (`tokens.json`)
+
+Edit `tokens.json` to define which tokens to track.
+**Example:**
+
+```json
 [
     {
         "symbol": "USDT",
@@ -77,20 +97,32 @@ JSON
         "threshold": 1000000000
     }
 ]
-🏃 Usage
+
+```
+
+## 🏃 Usage
+
 Run the main script:
 
-Bash
-
+```bash
 python main.py
-You will see logs in your terminal indicating that the system is scanning blocks. When a transaction exceeding your defined threshold occurs, you will receive a Discord notification immediately.
 
-📖 How to Read Alerts
-Inflow to Exchange (e.g., To: Binance): 🔴 Potential Dump. Whale is moving funds to an exchange, likely to sell.
+```
 
-Outflow to Wallet (e.g., From: Binance): 🟢 Accumulation. Whale is withdrawing funds to cold storage. Bullish signal.
+You will see logs in your terminal indicating that the system is scanning blocks. When a transaction exceeding your defined `threshold` occurs, you will receive a Discord notification immediately.
 
-Wallet to Wallet: ⚪ Neutral. OTC deals or internal transfers.
+## 📖 How to Read Alerts
 
-⚠️ Disclaimer
-This tool is for educational and informational purposes only. On-chain data does not guarantee market movements. Do Your Own Research (DYOR) before trading.
+* **Inflow to Exchange (e.g., To: Binance):** 🔴 **Potential Dump.** Whale is moving funds to an exchange, likely to sell.
+* **Outflow to Wallet (e.g., From: Binance):** 🟢 **Accumulation.** Whale is withdrawing funds to cold storage. Bullish signal.
+* **Wallet to Wallet:** ⚪ **Neutral.** OTC deals or internal transfers.
+
+## ⚠️ Disclaimer
+
+This tool is for educational purposes only. On-chain data does not guarantee market movements. **Do Your Own Research (DYOR)** before trading.
+
+---
+
+```
+
+```
